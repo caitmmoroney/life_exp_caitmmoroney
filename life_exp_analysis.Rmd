@@ -21,10 +21,13 @@ Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 # Life Expectancy Analysis
 
 ```{r}
+# Load the gapminder unfiltered data frame into R
 df <- gapminder::gapminder_unfiltered
 ```
 
 ```{r}
+# Calculate the maximum life expectancy by year and the corresponding country with
+# that maximum life expectancy.
 df %>%
   group_by(year) %>%
   filter(lifeExp == max(lifeExp)) %>%
