@@ -31,7 +31,10 @@ df <- gapminder::gapminder_unfiltered
 df %>%
   group_by(year) %>%
   filter(lifeExp == max(lifeExp)) %>%
-  arrange(year)
+  arrange(year) %>%
+  ggplot(aes(x = year, y = lifeExp)) +
+  geom_point(aes(color = country)) +
+  geom_smooth(method = "lm")
 ```
 
 
