@@ -36,5 +36,5 @@ df %>%
   geom_point(aes(color = country)) +
   geom_smooth(method = "lm")
 ```
-
+This plot shows maximum life expectancy over time, which appears to be an approximately linear relationship.
 
